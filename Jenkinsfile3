@@ -219,17 +219,17 @@ sh '''
         }
     }
     post {
-        always {
-            dir('ci-runtime') {
-                sh '''
-                    docker compose ps -a || true
-                    docker compose logs --tail=20 db || true
-                    docker compose down --remove-orphans || true
-                    docker builder prune -f || true
-                '''
-            }s
+            always {
+                dir('ci-runtime') {
+                    sh '''
+                        docker compose ps -a || true
+                        docker compose logs --tail=20 db || true
+                        docker compose down --remove-orphans || true
+                        docker builder prune -f || true
+                    '''
+                }s
+            }
+            success { echo 'Task 1 CI checks passed.' }
+            failure { echo 'Task 1 failed; inspect Console Output.' }
         }
-        success { echo 'Task 1 CI checks passed.' }
-        failure { echo 'Task 1 failed; inspect Console Output.' }
     }
-}
