@@ -2,6 +2,12 @@
 pipeline {
     agent any
 
+    environment {
+    IMAGE_REPO = 'zm502/PHPAPP
+    DOCKERHUB_CREDENTIALS = credentials('DockerHub')
+    DOCKERHUB_USERNAME = 'zm502'
+}
+
     options {
         skipDefaultCheckout(true)
        
