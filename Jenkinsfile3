@@ -137,7 +137,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                 echo 'Downloading latest code from GitHub'
+                 echo 'Downloading application from GitHub'
               dir('ci-source') 
              { checkout scm } }
         }
