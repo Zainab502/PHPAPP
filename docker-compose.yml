@@ -19,6 +19,7 @@ services:
       MYSQL_DATABASE: docker_database
 
 
-
+volumes:
+  db_data
 
 
