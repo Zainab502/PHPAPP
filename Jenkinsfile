@@ -7,10 +7,10 @@ pipeline {
     }
 
     environment {
-        IMAGE_REPO = 'bassam2080/myapp3'
+        IMAGE_REPO = 'zm502/PHPAPP'
    
     DOCKERHUB_CREDENTIALS = credentials('DockerHub')
-    DOCKERHUB_USERNAME = 'bassam2080'
+    DOCKERHUB_USERNAME = 'zm502'
 }
     
 
@@ -20,8 +20,6 @@ pipeline {
             steps {
                 echo 'Downloading application from GitHub'
 
-                git branch: 'main',
-                    url: 'https://github.com/bassam2080/week72627.git'
             }
         }
 
