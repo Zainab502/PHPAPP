@@ -7,7 +7,7 @@ pipeline {
     }
 
     environment {
-        IMAGE_REPO = 'zm502/PHPAPP'
+        IMAGE_REPO = 'zm502/phpapp'
    
     DOCKERHUB_CREDENTIALS = credentials('DockerHub')
     DOCKERHUB_USERNAME = 'zm502'
